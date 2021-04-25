@@ -8,6 +8,10 @@
       "entrega": "À partir de R$ 3,00",
       "status": "ABERTO AGORA"
     }
-  ]
+  ],
+  "carrinho": {
+    "quantidade": 5,
+    "valor": 350
+  }
   
 }
