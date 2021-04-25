@@ -66,7 +66,8 @@ const useStyles = makeStyles((theme) => ({
   },
   value: {
     marginLeft: -80,
-    marginTop: 10
+    marginTop: 10,
+    color: '#B41C8B'
   }
 }));
 
@@ -100,10 +101,10 @@ export default function MenuAppComponent(props) {
         <Divider orientation="vertical" flexItem  className={classes.divider}/>
         <ShoppingCartIcon style={{width: 12, height: 12, marginTop: -15}}/>
         <Typography className={classes.carrinho}>
-            5 produtos no carrinho
+            {props.carrinho.quantidade} produtos no carrinho
         </Typography>
         <Typography className={classes.value} >
-            valor
+            R$ {props.carrinho.valor}
         </Typography> 
         </Toolbar>
       </AppBar>

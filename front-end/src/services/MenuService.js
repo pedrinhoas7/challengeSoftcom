@@ -16,6 +16,16 @@ export class MenuService extends React.Component {
         }
     }
 
+    async getCarrinho() {
+        try {
+            const res = await axios.get('http://localhost:3000/carrinho');
+            return await res.data
+            
+        } catch (error) {
+            throw error;
+        }
+    }
+
   
 }
 

@@ -8,14 +8,20 @@ class MenuApp extends Component {
     super(props)
     this.state = {
         empresa: [],
+        carrinho: [],
 
     };
 }
   componentDidMount(){
-    const resp = MenuService.getEmpresa().then(data => { 
+    const emp = MenuService.getEmpresa().then(data => { 
       const empresa = data
-      console.log(resp)
+      console.log(emp)
       this.setState({empresa: empresa})
+    });
+    const carr = MenuService.getCarrinho().then(data => { 
+      const carrinho = data
+      console.log(carr)
+      this.setState({carrinho: carrinho})
     });
   }
   
@@ -24,6 +30,7 @@ class MenuApp extends Component {
     <div >
       <MenuAppComponent
       empresa={this.state.empresa}
+      carrinho={this.state.carrinho}
       />
     </div>
   );
