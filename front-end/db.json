@@ -12,6 +12,33 @@
   "carrinho": {
     "quantidade": 5,
     "valor": 350
-  }
+  },
+  "produtos": [
+    {
+    "id": 1,
+    "imageUrl": "/product1.png",
+    "titulo": "Prduto 1",
+    "valor": 69.90
+    },
+    {
+      "id": 2,
+      "imageUrl": "/product2.png",
+      "titulo": "Produto 2",
+      "valor": 295.50
+    },
+    {
+       "id": 1,
+       "imageUrl": "/product1.png",
+       "titulo": "Prduto 3",
+       "valor": 69.90
+    },
+    {
+      "id": 2,
+      "imageUrl": "/product2.png",
+      "titulo": "Produto 4",
+      "valor": 295.50
+    }
+  ]
+
   
 }

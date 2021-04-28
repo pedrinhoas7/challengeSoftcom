@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import CardProductComponent from './CardProductComponent';
+import CardProduct from './CardProduct';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -43,27 +44,27 @@ function a11yProps(index: any) {
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    marginTop: 87,
+    marginTop: 100,
   },
   appBar: {
-      marginTop: 50,
+      marginTop: 60,
       backgroundColor: 'white',
       color: '#3F3F3F',
       borderTop: '3px solid',
-    borderTopColor: '#B41C8B'
+      borderTopColor: '#B41C8B'
   },
   table: {
-    fontSize: 8,
+   /*  fontSize: 8,
     fontFamily: 'Quicksand',
     minWidth: '16.5%',
-    padding: 1,
+    padding: 1, */
   },
   tabs:{
-    minWidth: '80%',
+    /* minWidth: '80%', */
     
   },
   panel:{
-    width: 20
+    /* width: 20 */
   }
 }));
 
@@ -94,7 +95,7 @@ export default function MenuCategoria() {
         </Tabs>
       </AppBar>
       <TabPanel  value={value} index="one">
-        <CardProductComponent/>
+        <CardProduct/>
       </TabPanel>
       <TabPanel value={value} index="two">
         Item Two

@@ -18,57 +18,59 @@ const useStyles = makeStyles((theme) => ({
      flex: 1,
      backgroundColor: '#FFFFFF',
      color: '#333333',
+     maxHeight: '15%'
   },
   logo: {
     border: '1.5px solid',
     borderColor: '#B41C8B',
-    height: 60,
-    width: 60,
+    height: '50%',
+    width: '50%',
     marginLeft: 10
   },
   title: {
-    fontSize: 13,
+    /* fontSize: 26,
     fontWeight: 'bold',
     font: 'Quicksand',
-    marginTop: '-6%',
+    marginTop: '-4%',
     marginLeft: 10,
+    width: '30%' */
   },
   status: {
-    fontSize: 6,
+    /* fontSize: 12,
     marginLeft: 10,
-    marginTop: -28,
+    marginTop: -28, */
     color: '#1BBB16',
   },
   endereco:{
-    fontSize: 8,
+    /* fontSize: 16,
     marginTop: 12,
-    marginLeft: -210,
+    marginLeft: -210, */
   },
   delivery:{
-    fontSize: 8,
+    /* fontSize: 16,
     marginLeft: -275,
-    marginTop: 50,
+    marginTop: 50, */
   },
   entrega:{
-    fontSize: 8,
+    /* fontSize: 16,
     marginLeft: 10,
-    marginTop: 50,
+    marginTop: 50, */
   },
   divider: {
     backgroundColor: '#ECECEC',
-    marginLeft: 320,
+    /* marginLeft: 320,
     height: 60,
     marginTop: 10,
-    width: 0.1,
+    width: 0.1, */
   },
   carrinho:{
-    marginLeft: 10,
-    fontSize: 10,
-    marginTop: -15,
+    /* marginLeft: 10,
+    fontSize: 20,
+    marginTop: -15, */
   },
   value: {
-    marginLeft: -80,
-    marginTop: 10,
+/*     marginLeft: -80,
+    marginTop: 10, */
     color: '#B41C8B'
   }
 }));
