@@ -5,6 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import CardProductComponent from './CardProductComponent';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -24,7 +25,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box p={1}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -41,13 +42,28 @@ function a11yProps(index: any) {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
+    marginTop: 87,
   },
   appBar: {
-      marginTop: 1,
+      marginTop: 50,
       backgroundColor: 'white',
-      color: '#3F3F3F'
+      color: '#3F3F3F',
+      borderTop: '3px solid',
+    borderTopColor: '#B41C8B'
+  },
+  table: {
+    fontSize: 8,
+    fontFamily: 'Quicksand',
+    minWidth: '16.5%',
+    padding: 1,
+  },
+  tabs:{
+    minWidth: '80%',
+    
+  },
+  panel:{
+    width: 20
   }
 }));
 
@@ -62,22 +78,23 @@ export default function MenuCategoria() {
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
-        <Tabs value={value} onChange={handleChange} aria-label="wrapped label tabs example">
+        <Tabs value={value} onChange={handleChange} className={classes.tabs}  aria-label="wrapped label tabs example">
           <Tab
+            className={classes.table}
             value="one"
             label="Sugestão do Vendedor"
             wrapped
             {...a11yProps('one')}
           />
-          <Tab value="two" label="Brinquedos" {...a11yProps('two')} />
-          <Tab value="three" label="Cama e Casinha" {...a11yProps('three')} />
-          <Tab value="four" label="Coleiras" {...a11yProps('four')} />
-          <Tab value="five" label="Ossos e Petiscos" {...a11yProps('five')} />
-          <Tab value="six" label="Saúde" {...a11yProps('six')} />
+          <Tab value="two" label="Brinquedos" {...a11yProps('two')} className={classes.table}/>
+          <Tab value="three" label="Cama e Casinha" {...a11yProps('three')} className={classes.table}/>
+          <Tab value="four" label="Coleiras" {...a11yProps('four')} className={classes.table}/>
+          <Tab value="five" label="Ossos e Petiscos" {...a11yProps('five')} className={classes.table}/>
+          <Tab value="six" label="Saúde" {...a11yProps('six')} className={classes.table}/>
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index="one">
-        Item One
+      <TabPanel  value={value} index="one">
+        <CardProductComponent/>
       </TabPanel>
       <TabPanel value={value} index="two">
         Item Two
@@ -86,13 +103,13 @@ export default function MenuCategoria() {
         Item Three
       </TabPanel>
       <TabPanel value={value} index="four">
-        Item Three
+        Item four
       </TabPanel>
       <TabPanel value={value} index="five">
-        Item Three
+        Item five
       </TabPanel>
       <TabPanel value={value} index="six">
-        Item Three
+        Item six
       </TabPanel>
     </div>
   );

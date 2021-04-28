@@ -7,29 +7,31 @@ import IconButton from '@material-ui/core/IconButton';
 import { Avatar, Divider } from '@material-ui/core';
 import { AccessTime, Motorcycle } from '@material-ui/icons';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import useMediaQuery from '@material-ui/core/useMediaQuery/'
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
     
-    
   },
   barra: {
-     height: 85,
+     flex: 1,
      backgroundColor: '#FFFFFF',
-     color: '#333333'
+     color: '#333333',
   },
   logo: {
     border: '1.5px solid',
     borderColor: '#B41C8B',
-    height: 62,
-    width: 62
+    height: 60,
+    width: 60,
+    marginLeft: 10
   },
   title: {
     fontSize: 13,
     fontWeight: 'bold',
     font: 'Quicksand',
-    marginTop: -32,
+    marginTop: '-6%',
+    marginLeft: 10,
   },
   status: {
     fontSize: 6,
@@ -72,16 +74,17 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function MenuAppComponent(props) {
+
   const classes = useStyles();
   console.log(props.empresa.name)
   return (
-    <div className={classes.root}>
+    <div className={classes.root} >
+      
       <AppBar className={classes.barra}>
         <Toolbar>
-          <IconButton edge="start"  color="inherit" aria-label="menu">
+          <IconButton edge="start"  color="inherit" aria-label="menu" disabled>
             <Avatar className={classes.logo} src={process.env.PUBLIC_URL + '/logo.png'}/>
           </IconButton>
-          
           <Typography variant="h6" className={classes.title}>
             {props.empresa.name} 
           </Typography>      

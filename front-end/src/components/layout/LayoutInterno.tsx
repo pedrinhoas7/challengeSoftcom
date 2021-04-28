@@ -14,6 +14,7 @@ class LayoutInterno extends Component{
         <Switch>
                <Route path='/home' exact={true}>
                     <MenuApp/>
+                    <MenuCategoria/>
             </Route>
         </Switch>
         </>
