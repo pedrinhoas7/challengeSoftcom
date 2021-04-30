@@ -5,6 +5,7 @@ import {
   } from "react-router-dom";
 import MenuApp from '../MenuApp';
 import MenuCategoria from '../MenuCategoria';
+import FooterBar from './FooterBar';
 
 
 class LayoutInterno extends Component{
@@ -15,6 +16,7 @@ class LayoutInterno extends Component{
                <Route path='/home' exact={true}>
                     <MenuApp/>
                     <MenuCategoria/>
+                    <FooterBar/>
             </Route>
         </Switch>
         </>

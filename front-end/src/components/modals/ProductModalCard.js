@@ -21,33 +21,11 @@ const useStyles = makeStyles({
 });
 
 
-export default function CardProductComponent(props) {
+export default function ProductModalCard(props) {
   const classes = useStyles();
   {console.log(props.produto.id)}
   
   return (
-    <>
-    <Card className={classes.root}
-    >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          image={process.env.PUBLIC_URL + props.produto.imageUrl}
-        />
-        <CardContent>
-          <Typography variant="body2"  component="p" className={classes.title}>
-          {props.produto.titulo}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions> 
-      {props.produto.valor}
-      <ProductModal
-        produto={props.produto}
-      />
-      </CardActions>
-    </Card>
-    </>
+    <p>ola</p>
   );
 }

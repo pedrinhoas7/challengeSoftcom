@@ -3,6 +3,7 @@ import  MenuService  from '../services/MenuService';
 import  ProductService  from '../services/ProductService';
 import CardProductComponent from './CardProductComponent';
 import MenuAppComponent from './layout/MenuAppComponent';
+import ProductModal from './modals/ProductModal';
 
 class CardProduct extends Component {
   
@@ -21,8 +22,8 @@ class CardProduct extends Component {
   }
     render(){
   return (
-    <div>
-       {this.state.produtos.map((produto, index) => (
+    <div style={{backgroundColor: '#F3F3F4'}}>
+       {this.state.produtos.map((produto) => (
            <CardProductComponent
            produto={produto}
            />
