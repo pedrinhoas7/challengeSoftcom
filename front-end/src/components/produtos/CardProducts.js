@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import  MenuService  from '../../services/MenuService';
 import  ProductService  from '../../services/ProductService';
 import CardProductComponent from '../produtos/CardProductComponent';
-import MenuAppComponent from '../menu/MenuAppComponent';
-import ProductModal from '../modals/ProductModal';
+
 import Grid from '@material-ui/core/Grid';
-import { Autocomplete } from '@material-ui/lab';
-import { TextField } from '@material-ui/core';
-import { Search, ShoppingBasket } from '@material-ui/icons';
 
 class CardProducts extends Component {
   
@@ -26,13 +21,72 @@ getOption(option){
 }
   componentDidMount(){
     const res = ProductService.getProdutos().then(produtos => { 
-        console.log(produtos)
+        console.log(res)
       this.setState({produtos: produtos.data})
     });
   }
     render(){
   return (
-    <p>oi</p>
+    <Grid container spacing={24}>
+       {this.state.produtos.map((produto) => (
+         <>
+        <Grid item lg={2}>
+          {produto.categoria === 'sugestao' ?
+          <>
+           Sugestão do Vendedor
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        <Grid>
+        {produto.categoria === 'brinquedos' ?
+        <>
+           Brinquedos
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        <Grid>
+           {produto.categoria === 'camaecasa' ? 
+           <>
+           Cama e casa
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        <Grid>
+           {produto.categoria === 'coleiras' ? 
+           <>
+           Coleiras
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        <Grid>
+           {produto.categoria === 'ossosepetiscos' ? 
+           <>
+           Ossos e Petiscos
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        <Grid>
+        {produto.categoria === 'saude' ? 
+           <>
+           Saude
+           <CardProductComponent
+           produto={produto}
+           />
+           </> : null}
+        </Grid>
+        </>
+    ))}
+    </Grid>
   );
 }
 }

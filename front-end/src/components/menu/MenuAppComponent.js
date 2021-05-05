@@ -7,7 +7,6 @@ import IconButton from '@material-ui/core/IconButton';
 import { Avatar, Divider } from '@material-ui/core';
 import { AccessTime, Motorcycle } from '@material-ui/icons';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import useMediaQuery from '@material-ui/core/useMediaQuery/'
 
 
 const useStyles = makeStyles((theme) => ({

@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import  MenuService  from '../../services/MenuService';
 import  ProductService  from '../../services/ProductService';
 import CardProductComponent from '../produtos/CardProductComponent';
-import MenuAppComponent from '../menu/MenuAppComponent';
-import ProductModal from '../modals/ProductModal';
 import Grid from '@material-ui/core/Grid';
 import { Autocomplete } from '@material-ui/lab';
 import { TextField } from '@material-ui/core';
-import { Search, ShoppingBasket } from '@material-ui/icons';
+
 
 class CardProduct extends Component {
   
@@ -50,7 +47,7 @@ getOption(option){
        {this.state.produtos.map((produto) => (
          <>
         <Grid item lg={2}>
-          {produto.categoria == 'sugestao' ?
+          {produto.categoria === 'sugestao' ?
           <>
            Sugestão do Vendedor
            <CardProductComponent
@@ -59,7 +56,7 @@ getOption(option){
            </> : null}
         </Grid>
         <Grid>
-        {produto.categoria == 'brinquedos' ?
+        {produto.categoria === 'brinquedos' ?
         <>
            Brinquedos
            <CardProductComponent
@@ -68,7 +65,7 @@ getOption(option){
            </> : null}
         </Grid>
         <Grid>
-           {produto.categoria == 'camaecasa' ? 
+           {produto.categoria === 'camaecasa' ? 
            <>
            Cama e casa
            <CardProductComponent
@@ -77,7 +74,7 @@ getOption(option){
            </> : null}
         </Grid>
         <Grid>
-           {produto.categoria == 'coleiras' ? 
+           {produto.categoria === 'coleiras' ? 
            <>
            Coleiras
            <CardProductComponent
@@ -86,7 +83,7 @@ getOption(option){
            </> : null}
         </Grid>
         <Grid>
-           {produto.categoria == 'ossosepetiscos' ? 
+           {produto.categoria === 'ossosepetiscos' ? 
            <>
            Ossos e Petiscos
            <CardProductComponent
@@ -95,7 +92,7 @@ getOption(option){
            </> : null}
         </Grid>
         <Grid>
-        {produto.categoria == 'saude' ? 
+        {produto.categoria === 'saude' ? 
            <>
            Saude
            <CardProductComponent

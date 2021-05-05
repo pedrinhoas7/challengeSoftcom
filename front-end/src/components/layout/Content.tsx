@@ -5,8 +5,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import CardProductComponent from '../produtos/CardProductComponent';
-import CardProduct from '../produtos/CardProduct';
+import CardProducts from '../produtos/CardProducts';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -68,7 +67,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function MenuCategoria() {
+export default function Content() {
   const classes = useStyles();
   const [value, setValue] = React.useState('one');
 
@@ -95,7 +94,7 @@ export default function MenuCategoria() {
         </Tabs>
       </AppBar>
       <TabPanel  value={value} index="one">
-        <CardProduct/>
+        <CardProducts/>
       </TabPanel>
       <TabPanel value={value} index="two">
         Item Two

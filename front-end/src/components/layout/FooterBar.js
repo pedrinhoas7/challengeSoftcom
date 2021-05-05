@@ -1,13 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import { Avatar, Divider } from '@material-ui/core';
-import { AccessTime, Facebook, Image, Instagram, Motorcycle, Twitter, YouTube } from '@material-ui/icons';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import useMediaQuery from '@material-ui/core/useMediaQuery/'
+import {  Facebook, Instagram, Twitter, YouTube } from '@material-ui/icons';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -43,14 +38,14 @@ export default function FooterBar() {
     <div className={classes.root} >
         <Toolbar className={classes.toolbar}>
             <Typography style={{marginLeft: 55, width: 200, marginTop: -10}}>Desenvolvido Por</Typography>
-            <img className={classes.logo} src={process.env.PUBLIC_URL + '/logoSoftcom.png'}/>
-          <a className={classes.privacity} href="#">
+            <img alt="img" className={classes.logo} src={process.env.PUBLIC_URL + '/logoSoftcom.png'}/>
+          <a className={classes.privacity} href="/privacity">
             Politicas de privacidade
           </a>      
-          <a className={classes.privacity} href="#"> 
+          <a className={classes.privacity} href="/use"> 
           termo de Uso
         </a>
-        <a className={classes.privacity} href="#">
+        <a className={classes.privacity} href="/Social">
            Nossas Redes Sociais
         </a>
         <div className={classes.socialMedia}>
