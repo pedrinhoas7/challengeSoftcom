@@ -23,7 +23,7 @@ getOption(option){
 }
   componentDidMount(){
     const res = ProductService.getProdutos().then(produtos => { 
-        console.log(produtos)
+        console.log(res)
       this.setState({produtos: produtos.data})
     });
   }
@@ -46,10 +46,11 @@ getOption(option){
       <Grid container spacing={24}>
        {this.state.produtos.map((produto) => (
          <>
-        <Grid item lg={2}>
+        <Grid >
+          
           {produto.categoria === 'sugestao' ?
           <>
-           Sugestão do Vendedor
+          Sugestão do Vendedor
            <CardProductComponent
            produto={produto}
            />

@@ -5,7 +5,14 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import CardProducts from '../produtos/CardProducts';
+import CardProduct from '../produtos/CardProduct';
+import SugestaoVendedor from '../produtos/SugestaoVendedor';
+import Brinquedos from '../produtos/Brinquedos';
+import CamaCasinha from '../produtos/CamaCasinha';
+import Coleiras from '../produtos/Coleiras';
+import OssosPetiscos from '../produtos/OssosPetiscos';
+import Saude from '../produtos/Saude';
+import ProdutoAutoComplete from '../search/ProdutosAutoComplete';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -44,6 +51,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   root: {
     backgroundColor: theme.palette.background.paper,
     marginTop: 100,
+    width: '101.35%',
+    marginLeft: -10
   },
   appBar: {
       marginTop: 60,
@@ -94,22 +103,58 @@ export default function Content() {
         </Tabs>
       </AppBar>
       <TabPanel  value={value} index="one">
-        <CardProducts/>
+        <ProdutoAutoComplete/>
+        <SugestaoVendedor/>
+        <Brinquedos/>
+        <CamaCasinha/>
+        <Coleiras/>
+        <OssosPetiscos/>
+        <Saude/>
       </TabPanel>
       <TabPanel value={value} index="two">
-        Item Two
+        <ProdutoAutoComplete/>
+        <Brinquedos/>
+        <SugestaoVendedor/>
+        <CamaCasinha/>
+        <Coleiras/>
+        <OssosPetiscos/>
+        <Saude/>
       </TabPanel>
       <TabPanel value={value} index="three">
-        Item Three
+        <ProdutoAutoComplete/>
+        <CamaCasinha/>
+        <SugestaoVendedor/>
+        <Brinquedos/>
+        <Coleiras/>
+        <OssosPetiscos/>
+        <Saude/>
       </TabPanel>
       <TabPanel value={value} index="four">
-        Item four
+      <ProdutoAutoComplete/>
+        <Coleiras/>
+        <SugestaoVendedor/>
+        <Brinquedos/>
+        <CamaCasinha/>
+        <OssosPetiscos/>
+        <Saude/>
       </TabPanel>
       <TabPanel value={value} index="five">
-        Item five
+        <ProdutoAutoComplete/>
+        <OssosPetiscos/>
+        <SugestaoVendedor/>
+        <Coleiras/>
+        <Brinquedos/>
+        <CamaCasinha/>
+        <Saude/>
       </TabPanel>
       <TabPanel value={value} index="six">
-        Item six
+      <ProdutoAutoComplete/>
+        <Saude/>
+        <SugestaoVendedor/>
+        <OssosPetiscos/>
+        <Coleiras/>
+        <Brinquedos/>
+        <CamaCasinha/>
       </TabPanel>
     </div>
   );
