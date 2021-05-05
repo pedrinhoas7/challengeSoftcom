@@ -17,27 +17,87 @@
     {
     "id": 1,
     "imageUrl": "/product1.png",
-    "titulo": "Prduto 1",
-    "valor": 69.90
+    "titulo": "arma",
+    "valor": 69.90,
+    "categoria": "sugestao"
     },
     {
       "id": 2,
       "imageUrl": "/product2.png",
-      "titulo": "Produto 2",
-      "valor": 295.50
+      "titulo": "branco",
+      "valor": 295.50,
+      "categoria": "brinquedos"
     },
     {
-       "id": 1,
+       "id": 3,
        "imageUrl": "/product1.png",
-       "titulo": "Prduto 3",
-       "valor": 69.90
+       "titulo": "laranja",
+       "valor": 69.90,
+       "categoria": "camaecasa"
     },
     {
-      "id": 2,
+      "id": 4,
       "imageUrl": "/product2.png",
-      "titulo": "Produto 4",
-      "valor": 295.50
-    }
+      "titulo": "preto",
+      "valor": 295.50,
+      "categoria": "coleiras"
+    },
+    {
+      "id": 5,
+      "imageUrl": "/product1.png",
+      "titulo": "Prduto 5",
+      "valor": 69.90,
+      "categoria": "ossosepetiscos"
+      },
+      {
+        "id": 5,
+        "imageUrl": "/product1.png",
+        "titulo": "Prduto 5",
+        "valor": 69.90,
+        "categoria": "saude"
+        },
+        {
+          "id": 6,
+          "imageUrl": "/product1.png",
+          "titulo": "arma",
+          "valor": 69.90,
+          "categoria": "sugestao"
+          },
+          {
+            "id": 7,
+            "imageUrl": "/product2.png",
+            "titulo": "branco",
+            "valor": 295.50,
+            "categoria": "brinquedos"
+          },
+          {
+             "id": 8,
+             "imageUrl": "/product1.png",
+             "titulo": "laranja",
+             "valor": 69.90,
+             "categoria": "camaecasa"
+          },
+          {
+            "id": 9,
+            "imageUrl": "/product2.png",
+            "titulo": "preto",
+            "valor": 295.50,
+            "categoria": "coleiras"
+          },
+          {
+            "id": 10,
+            "imageUrl": "/product1.png",
+            "titulo": "Prduto 5",
+            "valor": 69.90,
+            "categoria": "ossosepetiscos"
+            },
+            {
+              "id": 11,
+              "imageUrl": "/product1.png",
+              "titulo": "Prduto 5",
+              "valor": 69.90,
+              "categoria": "saude"
+              }
   ]
 
   

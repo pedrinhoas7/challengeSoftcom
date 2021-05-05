@@ -10,23 +10,13 @@ import Typography from '@material-ui/core/Typography';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import { IconButton, Modal } from '@material-ui/core';
 
-function rand() {
-  return Math.round(Math.random() * 20) - 10;
-}
 
-function getModalStyle() {
-  const top = 50 + rand();
-  const left = 50 + rand();
 
-  return {
-    top: `${top}%`,
-    left: `${left}%`,
-    transform: `translate(-${top}%, -${left}%)`,
-  };
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
+    marginLeft: '30%',
+    marginTop: '5%',
     position: 'absolute',
     width: 400,
     backgroundColor: theme.palette.background.paper,
@@ -38,8 +28,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ProductModal(props) {
   const classes = useStyles();
-  // getModalStyle is not a pure function, we roll the style only on the first render
-  const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
   console.log(props)
   const handleOpen = () => {
@@ -51,7 +39,7 @@ export default function ProductModal(props) {
   };
 
   const body = (
-    <div style={modalStyle} className={classes.paper}>
+    <div  className={classes.paper}>
       <Card className={classes.root}
     >
       <CardActionArea>
@@ -75,7 +63,7 @@ export default function ProductModal(props) {
 
   return (
     <div>
-      <IconButton onClick={handleOpen}>
+      <IconButton onClick={handleOpen} style={{marginLeft: 70}}>
           <ShoppingCart style={{color: '#B11E89'}}/>
         </IconButton>
       <Modal
