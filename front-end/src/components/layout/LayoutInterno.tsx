@@ -3,8 +3,8 @@ import {
     Switch,
     Route,
   } from "react-router-dom";
-import MenuApp from '../MenuApp';
-import MenuCategoria from '../MenuCategoria';
+import MenuApp from '../menu/MenuApp';
+import MenuCategoria from '../menu/MenuCategoria';
 import FooterBar from './FooterBar';
 
 

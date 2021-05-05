@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import  MenuService  from '../services/MenuService';
-import  ProductService  from '../services/ProductService';
-import CardProductComponent from './CardProductComponent';
-import MenuAppComponent from './layout/MenuAppComponent';
-import ProductModal from './modals/ProductModal';
+import  MenuService  from '../../services/MenuService';
+import  ProductService  from '../../services/ProductService';
+import CardProductComponent from '../produtos/CardProductComponent';
+import MenuAppComponent from '../menu/MenuAppComponent';
+import ProductModal from '../modals/ProductModal';
 import Grid from '@material-ui/core/Grid';
 import { Autocomplete } from '@material-ui/lab';
 import { TextField } from '@material-ui/core';
@@ -16,6 +16,7 @@ class CardProduct extends Component {
     this.state = {
         produtos: [],
         produto: undefined,
+        sugestao: [],
 
     };
 }
@@ -53,7 +54,7 @@ getOption(option){
           <>
            Sugestão do Vendedor
            <CardProductComponent
-           produto={produtos}
+           produto={produto}
            />
            </> : null}
         </Grid>

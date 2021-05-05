@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import  MenuService  from '../services/MenuService';
-import MenuAppComponent from './layout/MenuAppComponent';
+import  MenuService  from '../../services/MenuService';
+import MenuAppComponent from './MenuAppComponent';
 
 class MenuApp extends Component {
   

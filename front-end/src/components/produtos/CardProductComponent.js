@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 import { IconButton } from '@material-ui/core';
-import ProductModal from './modals/ProductModal';
+import ProductModal from '../modals/ProductModal';
 
 const useStyles = makeStyles({
   root: {
