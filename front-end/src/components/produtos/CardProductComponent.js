@@ -10,12 +10,13 @@ import ProductModal from '../modals/ProductModal';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 300,
+    maxWidth: 200,
     margin: 10,
   },
   title: {
-    fontWeight: 'bold'
-  }
+    fontWeight: 'bold',
+    width: 190
+  },
 });
 
 
@@ -38,7 +39,7 @@ export default function CardProductComponent(props) {
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{fontWeight: 'bold'}}> 
+      <CardActions style={{fontWeight: 'bold', width: 200}}> 
        R$ {props.produto.valor}
       <ProductModal
         produto={props.produto}

@@ -29,7 +29,7 @@ getOption(option){
   }
     render(){
   return (
-    <div style={{backgroundColor: '#F3F3F4'}}>
+    <div style={{marginLeft: 100, marginTop: 50}}>
       <Autocomplete
       id=""
       autoSelect

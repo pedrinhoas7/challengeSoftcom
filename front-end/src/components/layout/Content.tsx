@@ -5,7 +5,6 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import CardProduct from '../produtos/CardProduct';
 import SugestaoVendedor from '../produtos/SugestaoVendedor';
 import Brinquedos from '../produtos/Brinquedos';
 import CamaCasinha from '../produtos/CamaCasinha';
@@ -49,7 +48,7 @@ function a11yProps(index: any) {
 
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: '#F3F3F4',
     marginTop: 100,
     width: '101.35%',
     marginLeft: -10

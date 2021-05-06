@@ -17,9 +17,10 @@
     {
     "id": 1,
     "imageUrl": "/product1.png",
-    "titulo": "arma",
+    "titulo": "Shampoo Tradicional",
     "valor": 69.90,
-    "categoria": "sugestao"
+    "categoria": "sugestao",
+    "descricao": "- Indicado para cães e gatos;                                                                     - Contém extrato de aloe e vera e silicone;                                                                                                       - Ph neutro;- Usoveterinário;- Produto de alta qualidade.- Disponível em embalagens de 500ml e 5 litros."
     },
     {
       "id": 2,

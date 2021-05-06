@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import  ProductService  from '../../services/ProductService';
-import CardProductComponent from '../produtos/CardProductComponent';
-import Grid from '@material-ui/core/Grid';
 import { Autocomplete } from '@material-ui/lab';
 import { TextField } from '@material-ui/core';
 
-
 class ProdutoAutoComplete extends Component {
-  
   constructor(props) {
     super(props)
     this.state = {
@@ -29,13 +25,13 @@ getOption(option){
   }
     render(){
   return (
-    <div style={{backgroundColor: '#F3F3F4'}}>
+      <div style={{marginLeft: '5%', marginTop: '1%'}}>
       <Autocomplete
       id=""
       autoSelect
       options={this.state.produtos}
       getOptionLabel={(option) => option.titulo}
-      style={{ width: 300, backgroundColor: 'white' }}
+      style={{ width: 400, backgroundColor: 'white' }}
       renderInput={(params) => 
       <TextField {...params} 
       label="O que você procura ?" 
@@ -43,7 +39,7 @@ getOption(option){
       />
       }
       />
-    </div>
+      </div>
   );
 }
 }

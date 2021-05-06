@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import  ProductService  from '../../services/ProductService';
 import CardProductComponent from '../produtos/CardProductComponent';
 import Grid from '@material-ui/core/Grid';
-import { Autocomplete } from '@material-ui/lab';
-import { TextField } from '@material-ui/core';
 
 
 class Brinquedos extends Component {
@@ -27,7 +25,7 @@ getOption(option){
   }
     render(){
   return (
-    <div style={{backgroundColor: '#F3F3F4'}}>
+    <div style={{marginLeft: 100, marginTop: 50}}>
         Brinquedos
         <Grid container spacing={24}>
         {this.state.produtos.map((produto) => (
