@@ -14,6 +14,7 @@ class CardProduct extends Component {
         produtos: [],
         produto: undefined,
         sugestao: [],
+        count: props.count
 
     };
 }

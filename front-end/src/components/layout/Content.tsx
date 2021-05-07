@@ -61,17 +61,9 @@ const useStyles = makeStyles((theme: Theme) => ({
       borderTopColor: '#B41C8B'
   },
   table: {
-   /*  fontSize: 8,
     fontFamily: 'Quicksand',
     minWidth: '16.5%',
-    padding: 1, */
-  },
-  tabs:{
-    /* minWidth: '80%', */
-    
-  },
-  panel:{
-    /* width: 20 */
+    padding: 1,
   }
 }));
 
@@ -86,7 +78,7 @@ export default function Content() {
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
-        <Tabs value={value} onChange={handleChange} className={classes.tabs}  aria-label="wrapped label tabs example">
+        <Tabs value={value} onChange={handleChange}  aria-label="wrapped label tabs example">
           <Tab
             className={classes.table}
             value="one"

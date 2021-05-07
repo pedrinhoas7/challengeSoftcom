@@ -72,6 +72,7 @@ export default function ProductModal(props) {
           image={process.env.PUBLIC_URL + props.produto.imageUrl}
         />
         <CardContent>
+          
         </CardContent>
       </CardActionArea>
     </Card>
@@ -86,7 +87,8 @@ export default function ProductModal(props) {
     className={classes.observacoes} 
     rowsMin={6} />
     <AddProductVendas
-      produto={props.produto}
+      produto={props}
+
     />
     </div>
   );

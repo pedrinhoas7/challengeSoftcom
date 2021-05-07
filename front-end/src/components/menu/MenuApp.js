@@ -30,7 +30,6 @@ class MenuApp extends Component {
     <div >
       <MenuAppComponent
       empresa={this.state.empresa}
-      carrinho={this.state.carrinho}
       />
     </div>
   );

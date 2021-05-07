@@ -5,13 +5,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import { Avatar, Divider } from '@material-ui/core';
+import CarrinhoProductVenda from '../vendas/CarrinhoProductVendas';
 import { AccessTime, Motorcycle } from '@material-ui/icons';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    
+    width: 100
   },
   barra: {
      flex: 1,
@@ -60,17 +60,6 @@ const useStyles = makeStyles((theme) => ({
     height: 60,
     marginTop: 10,
     width: 0.1,
-  },
-  carrinho:{
-    marginLeft: 10,
-    fontSize: 20,
-    marginTop: -15,
-  },
-  value: {
-    marginLeft: -150,
-    marginTop: 30,
-    color: '#B41C8B',
-    fontWeight: 'bold'
   }
 }));
 
@@ -103,13 +92,7 @@ export default function MenuAppComponent(props) {
            <b>Entrega:</b> {props.empresa.entrega}
         </Typography> 
         <Divider orientation="vertical" flexItem  className={classes.divider}/>
-        <ShoppingCartIcon style={{width: 15, height: 15, marginTop: -15}}/>
-        <Typography className={classes.carrinho}>
-            {props.carrinho.quantidade} produtos no carrinho
-        </Typography>
-        <Typography className={classes.value} >
-            R$ {props.carrinho.valor}
-        </Typography> 
+        <CarrinhoProductVenda/>
         </Toolbar>
       </AppBar>
     </div>

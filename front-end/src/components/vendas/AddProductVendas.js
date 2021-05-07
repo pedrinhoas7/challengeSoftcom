@@ -30,10 +30,13 @@ class AddProductVendas extends Component{
         super(props)
         this.state = {
             count: 1,
+            compras: undefined,
+            produto: undefined
     
         };
         this.soma = this.soma.bind(this);
         this.subtracao = this.subtracao.bind(this);
+        this.adicionarProduto = this.adicionarProduto.bind(this);
     }
 
     soma(){
@@ -52,11 +55,25 @@ class AddProductVendas extends Component{
         
     }
 
+    adicionarProduto(){
+        this.setState({produto: this.props.produto})
+        const quantidade =this.state.count
+        const valor =this.props.produto.produto.valor
+        const preco = quantidade * valor 
+        const compras = []
+        compras.produtos = this.props.produto
+        compras.quantidade = quantidade
+        compras.preco = preco
+        compras.valor = valor
+        this.setState({compras: compras})
+    }
+
 
     render(){
         
         return (
             <>
+            {console.log(this.state)}
             <IconButton style={subtracao} onClick={this.subtracao}>
         <Remove/>
     </IconButton>
@@ -64,8 +81,8 @@ class AddProductVendas extends Component{
     <IconButton style={adicao}  onClick={this.soma}>
         <Add/>
     </IconButton>
-    <Button variant="contained" color="secondary" style={button}>
-      Adicionar            <div style={{marginLeft: 70}}>{this.props.produto.valor}</div>
+    <Button variant="contained" color="secondary" style={button} onClick={() => this.adicionarProduto ()}>
+      Adicionar            <div style={{marginLeft: 70}}>{this.props.produto.produto.valor}</div>
     </Button>
             </>
         )
