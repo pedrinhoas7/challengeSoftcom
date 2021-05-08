@@ -8,12 +8,12 @@ import {
 class LayoutExterno extends Component{
     
     render(){
-        return <>
-        <Switch>
-               <Route path='/' exact={true}>
-            </Route>
-        </Switch>
-        </>
+        return (
+                <Switch>
+                    <Route path='/' exact={true}>
+                    </Route>
+                </Switch>
+                )
     }
 }
 

@@ -79,13 +79,7 @@ export default function Content() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Tabs value={value} onChange={handleChange}  aria-label="wrapped label tabs example">
-          <Tab
-            className={classes.table}
-            value="one"
-            label="Sugestão do Vendedor"
-            wrapped
-            {...a11yProps('one')}
-          />
+          <Tab className={classes.table} value="one" label="Sugestão do Vendedor" wrapped {...a11yProps('one')}/>
           <Tab value="two" label="Brinquedos" {...a11yProps('two')} className={classes.table}/>
           <Tab value="three" label="Cama e Casinha" {...a11yProps('three')} className={classes.table}/>
           <Tab value="four" label="Coleiras" {...a11yProps('four')} className={classes.table}/>
@@ -121,7 +115,7 @@ export default function Content() {
         <Saude/>
       </TabPanel>
       <TabPanel value={value} index="four">
-      <ProdutoAutoComplete/>
+        <ProdutoAutoComplete/>
         <Coleiras/>
         <SugestaoVendedor/>
         <Brinquedos/>
@@ -139,7 +133,7 @@ export default function Content() {
         <Saude/>
       </TabPanel>
       <TabPanel value={value} index="six">
-      <ProdutoAutoComplete/>
+        <ProdutoAutoComplete/>
         <Saude/>
         <SugestaoVendedor/>
         <OssosPetiscos/>

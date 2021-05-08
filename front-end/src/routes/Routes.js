@@ -6,8 +6,8 @@ import LayoutInterno from '../components/layout/LayoutInterno';
 const Routes = () => (
     <Router>
         <Switch>
-                {/* Home */}
-              <Route path="/home" exact={true} component={LayoutInterno}/>
+            {/* Home */}
+            <Route path="/home" exact={true} component={LayoutInterno}/>
         </Switch>
     </Router>
 );

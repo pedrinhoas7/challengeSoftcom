@@ -79,20 +79,20 @@ export default function MenuAppComponent(props) {
             {props.empresa.name} 
           </Typography>      
           <Typography color="inherit" className={classes.status}>
-              <AccessTime style={{width: 10, height: 10}}/>{props.empresa.status}
+            <AccessTime style={{width: 10, height: 10}}/>{props.empresa.status}
           </Typography>
           <Typography className={classes.endereco}>
-          {props.empresa.endereco}
-        </Typography>
-        <Typography className={classes.delivery}>
-          <Motorcycle style={{width: 15, height: 15}}/>
-          <b style={{color: '#3F3F3F'}}>Delivery:</b> {props.empresa.delivery}
-        </Typography>
-        <Typography className={classes.entrega}>
-           <b>Entrega:</b> {props.empresa.entrega}
-        </Typography> 
-        <Divider orientation="vertical" flexItem  className={classes.divider}/>
-        <CarrinhoProductVenda/>
+            {props.empresa.endereco}
+          </Typography>
+          <Typography className={classes.delivery}>
+            <Motorcycle style={{width: 15, height: 15}}/>
+            <b style={{color: '#3F3F3F'}}>Delivery:</b> {props.empresa.delivery}
+          </Typography>
+          <Typography className={classes.entrega}>
+             <b>Entrega:</b> {props.empresa.entrega}
+          </Typography> 
+          <Divider orientation="vertical" flexItem  className={classes.divider}/>
+          <CarrinhoProductVenda/>
         </Toolbar>
       </AppBar>
     </div>

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
@@ -63,49 +62,43 @@ export default function ProductModal(props) {
 
   const body = (
     <div  className={classes.paper}>
-      <Card className={classes.root}
-    >
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          image={process.env.PUBLIC_URL + props.produto.imageUrl}
-        />
-        <CardContent>
-          
-        </CardContent>
-      </CardActionArea>
-    </Card>
-    <Typography variant="body2"  component="p" className={classes.titulo}>
-        {props.produto.titulo}
-    </Typography>
-    <Typography variant="body2"  component="p" className={classes.descricao} >
-        {props.produto.descricao}
-    </Typography>
-    <Typography style={{marginTop: '3%',marginLeft: '45%', fontWeight: 'bold'}}>Observações</Typography>
-    <TextareaAutosize aria-label="minimum height"
-    className={classes.observacoes} 
-    rowsMin={6} />
-    <AddProductVendas
-      produto={props}
-
-    />
+      <Card className={classes.root}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            image={process.env.PUBLIC_URL + props.produto.imageUrl}
+          />
+        </CardActionArea>
+      </Card>
+      <Typography variant="body2"  component="p" className={classes.titulo}>
+          {props.produto.titulo}
+      </Typography>
+      <Typography variant="body2"  component="p" className={classes.descricao} >
+          {props.produto.descricao}
+      </Typography>
+      <Typography style={{marginTop: '3%',marginLeft: '45%', fontWeight: 'bold'}}>Observações</Typography>
+      <TextareaAutosize aria-label="minimum height"
+      className={classes.observacoes} 
+      rowsMin={6} />
+      <AddProductVendas produto={props}/>
     </div>
   );
 
   return (
     <div>
       <IconButton onClick={handleOpen} style={{marginLeft: 70}}>
-          <ShoppingCart style={{color: '#B11E89'}}/>
-        </IconButton>
+        <ShoppingCart style={{color: '#B11E89'}}/>
+      </IconButton>
       <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="simple-modal-title"
-        aria-describedby="simple-modal-description"
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="simple-modal-title"
+      aria-describedby="simple-modal-description"
       >
+
         {body}
-        
+
       </Modal>
       
     </div>

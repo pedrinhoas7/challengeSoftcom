@@ -25,8 +25,7 @@ export default function CardProductComponent(props) {
   
   return (
     <>
-    <Card className={classes.root}
-    >
+    <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -34,16 +33,12 @@ export default function CardProductComponent(props) {
           image={process.env.PUBLIC_URL + props.produto.imageUrl}
         />
         <CardContent>
-          <Typography variant="body2"  component="p" className={classes.title}>
-          {props.produto.titulo}
-          </Typography>
+          <Typography variant="body2"  component="p" className={classes.title}>{props.produto.titulo}</Typography>
         </CardContent>
       </CardActionArea>
       <CardActions style={{fontWeight: 'bold', width: 200}}> 
-       R$ {props.produto.valor}
-      <ProductModal
-        produto={props.produto}
-      />
+          R$ {props.produto.valor}
+          <ProductModal produto={props.produto}/>
       </CardActions>
     </Card>
     </>

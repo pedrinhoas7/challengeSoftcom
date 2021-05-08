@@ -28,16 +28,12 @@ getOption(option){
     <div style={{marginLeft: 100, marginTop: 50}}>
         Ossos e Petiscos
         <Grid container spacing={24}>
-        {this.state.produtos.map((produto) => (
-        <Grid>
-          {produto.categoria === 'ossosepetiscos' ?
-          <>
-           <CardProductComponent
-           produto={produto}
-           />
-           </> : null}
-        </Grid>
-    ))}
+            {this.state.produtos.map((produto) => (
+              <Grid>
+                {produto.categoria === 'ossosepetiscos' ?
+                <CardProductComponent produto={produto}/> : null}
+              </Grid>
+            ))}
         </Grid>
     </div>
   );

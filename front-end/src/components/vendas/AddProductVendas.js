@@ -70,20 +70,19 @@ class AddProductVendas extends Component{
 
 
     render(){
-        
         return (
             <>
-            {console.log(this.state)}
+            {console.log(this.state.compras)}
             <IconButton style={subtracao} onClick={this.subtracao}>
-        <Remove/>
-    </IconButton>
-    <Typography style={quantidade} >{this.state.count}</Typography>
-    <IconButton style={adicao}  onClick={this.soma}>
-        <Add/>
-    </IconButton>
-    <Button variant="contained" color="secondary" style={button} onClick={() => this.adicionarProduto ()}>
-      Adicionar            <div style={{marginLeft: 70}}>{this.props.produto.produto.valor}</div>
-    </Button>
+                <Remove/>
+            </IconButton>
+            <Typography style={quantidade} >{this.state.count}</Typography>
+            <IconButton style={adicao}  onClick={this.soma}>
+                <Add/>
+            </IconButton>
+            <Button variant="contained" color="secondary" style={button} onClick={() => this.adicionarProduto ()}>
+                Adicionar<div style={{marginLeft: 70}}>{this.props.produto.produto.valor}</div>
+            </Button>
             </>
         )
     }

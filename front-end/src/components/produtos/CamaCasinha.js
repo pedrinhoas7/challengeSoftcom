@@ -27,18 +27,14 @@ getOption(option){
   return (
     <div style={{marginLeft: 100, marginTop: 50}}>
         Cama e Casinha
-        <Grid container spacing={24}>
+      <Grid container spacing={24}>
         {this.state.produtos.map((produto) => (
-        <Grid>
-          {produto.categoria === 'camaecasa' ?
-          <>
-           <CardProductComponent
-           produto={produto}
-           />
-           </> : null}
-        </Grid>
-    ))}
-        </Grid>
+          <Grid>
+            {produto.categoria === 'camaecasa' ?
+             <CardProductComponent produto={produto}/>: null}
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }

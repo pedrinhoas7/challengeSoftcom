@@ -11,15 +11,15 @@ import FooterBar from './FooterBar';
 class LayoutInterno extends Component{
     
     render(){
-        return <>
-        <Switch>
-               <Route path='/home' exact={true}>
-                    <MenuApp/>
-                    <Content/>
-                    <FooterBar/>
-            </Route>
-        </Switch>
-        </>
+        return( 
+                <Switch>
+                    <Route path='/home' exact={true}>
+                        <MenuApp/>
+                        <Content/>
+                        <FooterBar/>
+                    </Route>
+                </Switch>
+            )
     }
 }
 

@@ -17,27 +17,24 @@ class Coleiras extends Component {
 getOption(option){
   console.log(option)
 }
-  componentDidMount(){
-    const res = ProductService.getProdutos().then(produtos => { 
-        console.log(res)
-      this.setState({produtos: produtos.data})
-    });
-  }
+componentDidMount(){
+  const res = ProductService.getProdutos().then(produtos => { 
+    console.log(res)
+    this.setState({produtos: produtos.data})
+  });
+}
+
     render(){
   return (
     <div style={{marginLeft: 100, marginTop: 50}}>
         Coleiras
         <Grid container spacing={24}>
-        {this.state.produtos.map((produto) => (
-        <Grid>
-          {produto.categoria === 'coleiras' ?
-          <>
-           <CardProductComponent
-           produto={produto}
-           />
-           </> : null}
-        </Grid>
-    ))}
+          {this.state.produtos.map((produto) => (
+            <Grid>
+              {produto.categoria === 'coleiras' ?
+              <CardProductComponent produto={produto}/>: null}
+              </Grid>
+            ))}
         </Grid>
     </div>
   );
