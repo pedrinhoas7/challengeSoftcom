@@ -31,7 +31,7 @@ getOption(option){
         {this.state.produtos.map((produto) => (
           <Grid>
             {produto.categoria === 'camaecasa' ?
-             <CardProductComponent produto={produto}/>: null}
+             <CardProductComponent produto={produto} export={this.props.export}/>: null}
           </Grid>
         ))}
       </Grid>

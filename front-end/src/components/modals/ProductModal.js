@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   },
   titulo: {
     marginLeft: '45%',
-    marginTop: '-43%',
+    marginTop: '-40%',
     color: '#B41C8B',
     fontWeight: 'bold',
     fontSize: 18,

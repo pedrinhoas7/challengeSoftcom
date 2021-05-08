@@ -32,7 +32,7 @@ componentDidMount(){
           {this.state.produtos.map((produto) => (
             <Grid>
               {produto.categoria === 'coleiras' ?
-              <CardProductComponent produto={produto}/>: null}
+              <CardProductComponent produto={produto} export={this.props.export}/>: null}
               </Grid>
             ))}
         </Grid>

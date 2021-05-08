@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -86,56 +86,56 @@ export default function Content(props) {
       <TabPanel  value={value} index="one">
         <ProdutoAutoComplete/>
         <SugestaoVendedor export={props.export} />
-        <Brinquedos/>
-        <CamaCasinha/>
-        <Coleiras/>
-        <OssosPetiscos/>
-        <Saude/>
+        <Brinquedos export={props.export}/>
+        <CamaCasinha export={props.export}/>
+        <Coleiras export={props.export}/>
+        <OssosPetiscos export={props.export}/>
+        <Saude export={props.export}/>
       </TabPanel>
       <TabPanel value={value} index="two">
-        <ProdutoAutoComplete/>
-        <Brinquedos/>
-        <SugestaoVendedor/>
-        <CamaCasinha/>
-        <Coleiras/>
-        <OssosPetiscos/>
-        <Saude/>
+        <ProdutoAutoComplete />
+        <Brinquedos export={props.export}/>
+        <SugestaoVendedor export={props.export}/>
+        <CamaCasinha export={props.export}/>
+        <Coleiras export={props.export}/>
+        <OssosPetiscos export={props.export}/>
+        <Saude export={props.export}/>
       </TabPanel>
       <TabPanel value={value} index="three">
-        <ProdutoAutoComplete/>
-        <CamaCasinha/>
-        <SugestaoVendedor/>
-        <Brinquedos/>
-        <Coleiras/>
-        <OssosPetiscos/>
-        <Saude/>
+        <ProdutoAutoComplete />
+        <CamaCasinha export={props.export}/>
+        <SugestaoVendedor export={props.export}/>
+        <Brinquedos export={props.export}/>
+        <Coleiras export={props.export}/>
+        <OssosPetiscos export={props.export}/>
+        <Saude export={props.export}/>
       </TabPanel>
       <TabPanel value={value} index="four">
         <ProdutoAutoComplete/>
-        <Coleiras/>
-        <SugestaoVendedor/>
-        <Brinquedos/>
-        <CamaCasinha/>
-        <OssosPetiscos/>
+        <Coleiras export={props.export}/>
+        <SugestaoVendedor export={props.export}/>
+        <Brinquedos export={props.export}/>
+        <CamaCasinha export={props.export}/>
+        <OssosPetiscos export={props.export}/>
         <Saude/>
       </TabPanel>
       <TabPanel value={value} index="five">
         <ProdutoAutoComplete/>
-        <OssosPetiscos/>
-        <SugestaoVendedor/>
-        <Coleiras/>
-        <Brinquedos/>
-        <CamaCasinha/>
-        <Saude/>
+        <OssosPetiscos export={props.export}/>
+        <SugestaoVendedor export={props.export}/>
+        <Coleiras export={props.export}/>
+        <Brinquedos export={props.export}/>
+        <CamaCasinha export={props.export}/>
+        <Saude export={props.export}/>
       </TabPanel>
       <TabPanel value={value} index="six">
         <ProdutoAutoComplete/>
-        <Saude/>
-        <SugestaoVendedor/>
-        <OssosPetiscos/>
-        <Coleiras/>
-        <Brinquedos/>
-        <CamaCasinha/>
+        <Saude export={props.export}/>
+        <SugestaoVendedor export={props.export}/>
+        <OssosPetiscos export={props.export}/>
+        <Coleiras export={props.export}/>
+        <Brinquedos export={props.export}/>
+        <CamaCasinha export={props.export}/>
       </TabPanel>
     </div>
   );
