@@ -92,7 +92,7 @@ export default function MenuAppComponent(props) {
              <b>Entrega:</b> {props.empresa.entrega}
           </Typography> 
           <Divider orientation="vertical" flexItem  className={classes.divider}/>
-          <CarrinhoProductVenda/>
+          <CarrinhoProductVenda compra={props.compra}/>
         </Toolbar>
       </AppBar>
     </div>

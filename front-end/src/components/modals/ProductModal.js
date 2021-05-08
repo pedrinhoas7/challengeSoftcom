@@ -50,8 +50,7 @@ const useStyles = makeStyles((theme) => ({
 export default function ProductModal(props) {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  
-  console.log(props)
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -81,7 +80,7 @@ export default function ProductModal(props) {
       <TextareaAutosize aria-label="minimum height"
       className={classes.observacoes} 
       rowsMin={6} />
-      <AddProductVendas produto={props}/>
+      <AddProductVendas produto={props} export={props.export}/>
     </div>
   );
 

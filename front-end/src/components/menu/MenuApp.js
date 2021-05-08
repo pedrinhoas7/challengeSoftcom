@@ -28,7 +28,7 @@ class MenuApp extends Component {
     render(){
   return (
     <div >
-      <MenuAppComponent empresa={this.state.empresa}/>
+      <MenuAppComponent empresa={this.state.empresa} compra={this.props.compra} />
     </div>
   );
 }

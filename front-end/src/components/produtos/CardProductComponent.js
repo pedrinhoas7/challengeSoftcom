@@ -38,7 +38,7 @@ export default function CardProductComponent(props) {
       </CardActionArea>
       <CardActions style={{fontWeight: 'bold', width: 200}}> 
           R$ {props.produto.valor}
-          <ProductModal produto={props.produto}/>
+          <ProductModal produto={props.produto} export={props.export} />
       </CardActions>
     </Card>
     </>

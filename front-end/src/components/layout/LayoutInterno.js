@@ -9,13 +9,30 @@ import FooterBar from './FooterBar';
 
 
 class LayoutInterno extends Component{
-    
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            compra: {
+                preco: 0
+            }
+        };
+        this.exportProps = this.exportProps.bind(this)
+    }
+  
+
+    exportProps(c){
+        const compra = c
+        this.setState({compra: compra})
+    }
+  
     render(){
         return( 
                 <Switch>
                     <Route path='/home' exact={true}>
-                        <MenuApp/>
-                        <Content/>
+                    
+                        <MenuApp compra={this.state.compra}/>
+                        <Content export={this.exportProps}/>
                         <FooterBar/>
                     </Route>
                 </Switch>

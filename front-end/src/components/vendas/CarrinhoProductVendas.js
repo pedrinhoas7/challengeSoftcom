@@ -20,10 +20,9 @@ class CarrinhoProductVenda extends Component{
         this.state = {
             count: 0,
             valor: 0.0,
-    
         };
-
     }
+
 
     render(){
         
@@ -34,7 +33,7 @@ class CarrinhoProductVenda extends Component{
                 {this.state.count} produtos no carrinho
             </Typography>
             <Typography  style={value}>
-                R$ {this.state.valor}
+                R$ {this.props.compra.preco}
             </Typography> 
             </>
         )

@@ -66,6 +66,8 @@ class AddProductVendas extends Component{
         compras.preco = preco
         compras.valor = valor
         this.setState({compras: compras})
+        
+        this.props.export(compras)
     }
 
 

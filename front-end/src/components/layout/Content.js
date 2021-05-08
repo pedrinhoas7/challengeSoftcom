@@ -13,13 +13,8 @@ import OssosPetiscos from '../produtos/OssosPetiscos';
 import Saude from '../produtos/Saude';
 import ProdutoAutoComplete from '../search/ProdutosAutoComplete';
 
-interface TabPanelProps {
-  children?: React.ReactNode;
-  index: any;
-  value: any;
-}
 
-function TabPanel(props: TabPanelProps) {
+function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
@@ -39,14 +34,14 @@ function TabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: any) {
+function a11yProps(index) {
   return {
     id: `wrapped-tab-${index}`,
     'aria-controls': `wrapped-tabpanel-${index}`,
   };
 }
 
-const useStyles = makeStyles((theme: Theme) => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: '#F3F3F4',
     marginTop: 100,
@@ -67,11 +62,11 @@ const useStyles = makeStyles((theme: Theme) => ({
   }
 }));
 
-export default function Content() {
+export default function Content(props) {
   const classes = useStyles();
   const [value, setValue] = React.useState('one');
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: string) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
@@ -87,9 +82,10 @@ export default function Content() {
           <Tab value="six" label="Saúde" {...a11yProps('six')} className={classes.table}/>
         </Tabs>
       </AppBar>
+
       <TabPanel  value={value} index="one">
         <ProdutoAutoComplete/>
-        <SugestaoVendedor/>
+        <SugestaoVendedor export={props.export} />
         <Brinquedos/>
         <CamaCasinha/>
         <Coleiras/>
